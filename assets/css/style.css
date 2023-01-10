@@ -1,0 +1,557 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/background.png"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Form Stylesheet */
+.form-signin {
+    width: 100%;
+    max-width: 32rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.form-signup {
+    width: 100%;
+    max-width: 60rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.form-signin .form-floating:focus-within,
+.form-signup .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-about {
+    width: 100%;
+    max-width: 70rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.form-contacts {
+    width: 100%;
+    max-width: 45rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.form-sitemap, .form-faqs {
+    width: 100%;
+    max-width: 60rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.sitemap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.sitemap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* End of Form Stylesheet */
+
+/* Image Previewer Stylesheet */
+.upload-photo {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-photo-user, 
+.preview-photo-company,
+.preview-photo-proof {
+    width: 18rem;
+    /* padding: 1rem; */
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    height: 9rem;
+    margin-bottom: 4rem;
+}
+
+.preview-photo-user img, 
+.preview-photo-company img,
+.preview-photo-proof img {
+    height: 9rem;
+    width: 18rem;
+    /* transform: translate(18%); */
+    border-radius: 2%;
+    overflow: hidden;
+    border: 0.063rem solid #7c7b7b;
+    margin-bottom: 0.625rem;
+}
+
+.preview-photo-user input, 
+.preview-photo-company input,
+.preview-photo-proof input {
+    display: none;
+}
+
+.preview-photo-user label, 
+.preview-photo-company label,
+.preview-photo-proof label {
+    display: block;
+    /* width: 10rem; */
+    height: 2.7rem;
+    /* margin-left: 22%; */
+    line-height: 2.8rem;
+    text-align: center;
+    background: #fff;
+    color: #fff;
+    font-size: 0.938rem;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    background: #1b641b;
+}
+
+.preview-photo-user label:hover, 
+.preview-photo-company label:hover,
+.preview-photo-proof label:hover {
+    background: #ebebeb;
+    border: 2px solid #1b641b;
+    color: #1b641b;
+    line-height: 2.5rem;
+}
+/* End of Image Previewer Stylesheet */
+
+/* Navbar Stylesheet */
+.navbar, .footer{
+    background-color: #022502;
+}
+/* End Navbar Stylesheet */
+
+/* Navbar Comapny Name Stylesheet */
+.nav .nav-item{
+    margin-left: 0.5rem;
+}
+
+.nav .nav-item .nav-link{
+    color: #fff;
+    
+}
+
+.nav .nav-item .active{
+    background-color: #1b641b;
+}
+
+.nav-element a {
+    color: #fff;
+}
+
+.nav-element .active{
+    color: #000;
+    background-color: #ffea00;
+}
+
+.nav .nav-item .nav-link:hover{
+    background-color: #1b641b;
+    
+}
+
+.company-name {
+    display: none;
+}
+/* End of Navbar Comapny Name Stylesheet */
+
+/* Responsive Objects Stylesheet */
+@media only screen and (max-width: 900px) {
+    .nav-pills{
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-nav span{
+        display: none;
+    }
+
+    .company-name {
+        display: block;
+    }
+
+    .navbar-brand img {
+        height: 1.5rem;
+    }
+}
+/* End of Responsive Objects Stylesheet */
+
+/* Main Content Stylesheet */
+.main-content{
+    margin-top: 9rem; /* 8rem */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* height: 100%; */
+    max-width: 77rem; /* 85rem */
+    /* max-height: 135rem; */
+    padding: 15px;
+    /* margin: auto; */
+}
+/* End of Main Content Stylesheet */
+
+/* Custom Green Stylesheet */
+.text-custom-green {
+    color: #022502;
+}
+
+.text-custom-yellow {
+    color: #E49B0F;
+}
+
+.modal .bg-custom-yellow {
+    background-color: #E49B0F;
+}
+
+.main-content .bg-custom-green,
+.form-signup .bg-custom-green,
+.form-signin .bg-custom-green,
+.form-sitemap .bg-custom-green,
+.form-faqs .bg-custom-green, 
+.form-contacts .bg-custom-green,
+.form-about .border-custom-green {
+    background-color: #022502;
+}
+
+.main-content .border-custom-green,
+.form-signup .border-custom-green,
+.form-signin .border-custom-green,
+.form-sitemap .border-custom-green,
+.form-faqs .border-custom-green,
+.form-contacts .border-custom-green,
+.form-about .border-custom-green {
+    border: 0.3rem solid #022502;
+}
+
+.dropdown-hover .dropdown-menu {
+    background-color: #022502;
+}
+
+.main-content .border-bottom-custom-green {
+    border-bottom: 0.3rem solid #022502;
+}
+
+.dropdown-menu .list-group-item {
+    background-color: #022502;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-menu .list-group-item:hover {
+    background-color: #ffc107;
+    color: black;
+}
+
+.modal .border-custom-yellow {
+    border: 0.3rem solid #E49B0F;
+}
+
+.modal .border-custom-yellow2 {
+    border: 0.2rem solid #E49B0F;
+}
+/* End of Custom Green Stylesheet */
+
+/* Products Hover Stylesheet */
+.row .col .card:hover{
+    background: #28282B;
+    color: #fff;
+}
+
+/* .main-content .card-product{
+    height: 18.15rem;
+}
+
+.card-body .card-text{
+    width: auto;
+    overflow: hidden; 
+    line-height: 1.5rem;
+    height: 3rem; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+} */
+/* End of Products Hover Stylesheet */
+
+/* Datatables Stylesheet */
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.dataTable th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table.dataTable thead tr {
+    background-color: #022502;
+    color: #fff;
+}
+
+table.dataTable tfoot tr {
+    background-color: #fff;
+    color: #022502;
+}
+
+.pagination .page-item.active .page-link { 
+    background-color: #022502; 
+    color: #fff;
+}
+
+.pagination .page-item .page-link { 
+    color: #022502;
+}
+
+.item-notification:hover {
+    background-color: #ffc107;
+}
+/* End of Datatables Stylesheet */
+
+/* Dropdown Category Hover to Show/Unshow */
+.dropdown-hover:hover .dropdown-menu {
+    display: inline-block;
+}
+
+.dropdown-hover .dropdown-toggle:active {
+/*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+/* End of Dropdown Category Hover to Show/Unshow */
+
+/* Product Slider Using Swiper */
+.swiper {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 25rem;
+    object-fit: contain;
+}
+/* End of Product Slider Using Swiper */
+
+/* User Sidebar */
+.dropdown-toggle { 
+    outline: 0; 
+}
+
+.btn-toggle {
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    /* color: #000; */
+    background-color: #1b641b;
+    color: #fff;
+}
+
+/* .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+} */
+
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    color: #000;
+    background-color: #ffea00;
+}
+
+.scrollarea {
+    overflow-y: auto;
+}
+/* End of User Sidebar */
+
+/* Back to Top Button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 5.625rem;
+    right: 0.625rem;
+    display: none;
+    background-color: #022502;
+    color: #fff;
+}
+/* End of Back to Top Button */
+
+
+/* Users Order Tracking */
+.order-progress {
+    margin-bottom: 1.875rem;
+    overflow: hidden;
+    color: #878788;
+    padding-left: 0rem;
+    margin-top: 1.875rem;
+    display: flex;
+    justify-content: center;
+}
+    
+.order-progress li {
+    list-style-type: none;
+    font-size: 0.813rem;
+    width: 20%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    color: #878788;
+    text-align: center;
+}
+
+.order-progress li:first-child:before {
+    margin-left: 0.938rem;
+    padding-left: 0.688rem;
+    text-align : left;
+}
+
+.order-progress li:last-child:before {
+    margin-right: 0.313rem;
+    padding-right: 0.688rem;
+    text-align: right;
+}
+
+.order-progress li>div {
+    color: #fff;
+    width: 3.125rem;
+    text-align: center;
+    line-height: 3.125rem;
+    display: block;
+    font-size: 0.75rem;
+    background: #878788;
+    border-radius: 50%;
+    margin: auto;
+} 
+
+.order-progress li:after{ 
+    content: '';
+    width: 150%;
+    height: 0.5rem;
+    background: #878788;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 1.438rem;
+    z-index: -1;
+}
+
+.order-progress li:first-child:after { 
+    left: 50%;
+}
+
+.order-progress li:last-child:after {
+    left: 0%;
+    width: 50%;
+}
+
+.order-progress li.active-success {
+    font-weight: bold;
+    color: #1b641b;
+}
+
+.order-progress li.active-success>div {
+    background: #1b641b;
+}
+
+.order-progress li.active-success:after {
+    background: #1b641b;
+}
+
+.order-progress li.active-warning {
+    font-weight: bold;
+    color: #d4b70e;
+}
+
+.order-progress li.active-warning>div {
+    background: #d4b70e;
+}
+
+.order-progress li.active-warning:after {
+    background: #d4b70e;
+}
+
+.order-progress li.active-danger {
+    font-weight: bold;
+    color: #d70a0a;
+}
+
+.order-progress li.active-danger>div {
+    background: #d70a0a;
+}
+
+.order-progress li.active-danger:after {
+    background: #d70a0a;
+}
+
+.card-timeline{
+    background-color: #fff;
+    z-index: 0;
+}
+
+/* End of Users Order Tracking */
